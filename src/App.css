@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App,
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+.Header {
+  margin-top: 2em;
+}
+
+form {
+  display: flex;
+  gap: 1em;
+  width: 80%;
+}
+
+.TextInput {
+  flex: 3;
+}
+
+.Submit {
+  flex: 1;
+}
