@@ -14,7 +14,7 @@ export default function ResortDisplay({ conditions }) {
     return (
       <div className="ResortDisplay">
         <Parallax
-          bgImage="src/assets/images/07.jpeg"
+          bgImage="https://github.com/m-soro/Project_2/blob/main/src/assets/images/07.jpeg?raw=true"
           strength={200}
           blur={{ min: -5, max: 15 }}
         >

@@ -27,11 +27,11 @@ export default function Form({ resortSearch }) {
     section.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  // src/assets/images/02.jpeg
+  // https://github.com/m-soro/Project_2/blob/main/src/assets/images/01.jpeg?raw=true
   return (
     <div className="Form">
       <Parallax
-        bgImage="src/assets/images/02.jpeg"
+        bgImage="// https://github.com/m-soro/Project_2/blob/main/src/assets/images/02.jpeg?raw=true"
         strength={200}
         className="darken"
       >

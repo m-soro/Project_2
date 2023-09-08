@@ -7,10 +7,14 @@ const scroll = () => {
   section.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
+// https://github.com/m-soro/Project_2/blob/main/src/assets/images/01.jpeg?raw=true
 export default function Banner() {
   return (
     <div className="Banner" id="Banner">
-      <Parallax bgImage="src/assets/images/05.png" strength={200}>
+      <Parallax
+        bgImage="https://github.com/m-soro/Project_2/blob/main/src/assets/images/05.png?raw=true"
+        strength={200}
+      >
         <div className="Content">
           <div className="TextContent">
             <section className="">
