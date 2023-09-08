@@ -16,7 +16,8 @@
 /*** BANNER ***/
 .Banner p,
 .Banner h1,
-.Banner span {
+.Banner span,
+.Form h1 {
   color: white;
 }
 

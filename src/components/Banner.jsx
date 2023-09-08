@@ -16,7 +16,9 @@ export default function Banner() {
           <div className="TextContent">
             <section className="">
               <h1>Open Peaks</h1>
-              <p>Check snow and mountain operations all over the world!</p>
+              <p>
+                Check out skiing and snowboarding conditions all over the world!
+              </p>
 
               <span
                 className="material-symbols-outlined"
