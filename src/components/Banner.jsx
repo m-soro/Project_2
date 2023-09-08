@@ -1,13 +1,10 @@
 import { Parallax } from "react-parallax";
 
-import "animate.css/animate.css"; // you need to require the css somewhere
-
 const scroll = () => {
   const section = document.querySelector("#SearchForm");
   section.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
-// https://github.com/m-soro/Project_2/blob/main/src/assets/images/01.jpeg?raw=true
 export default function Banner() {
   return (
     <div className="Banner" id="Banner">

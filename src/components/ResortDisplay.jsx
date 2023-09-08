@@ -1,8 +1,7 @@
 import { Parallax } from "react-parallax";
 // Define a function that is our component, always make sure to declare the props parameter so you can use props in your component
 export default function ResortDisplay({ conditions }) {
-  // console.log(conditions);
-
+  console.log(conditions);
   // function to return loaded JSX
 
   const scroll = () => {
@@ -12,15 +11,24 @@ export default function ResortDisplay({ conditions }) {
 
   const loaded = () => {
     return (
-      <div className="ResortDisplay">
+      <div className="ResortDisplay ">
         <Parallax
           bgImage="https://github.com/m-soro/Project_2/blob/main/src/assets/images/07.jpeg?raw=true"
           strength={200}
           blur={{ min: -5, max: 15 }}
         >
-          <div className="ResortDisplayResults" id="ResortDisplayResults">
+          <div
+            className="ResortDisplayResults container-fluid"
+            id="ResortDisplayResults"
+          >
             <section>
-              <h1>Open Peaks</h1>
+              <hgroup>
+                <h1>
+                  {conditions.data.name}, {conditions.data.region}
+                </h1>
+                <h2>{conditions.data.country}</h2>
+              </hgroup>
+
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
               <p>
                 Esse, ex explicabo error cupiditate non ut est nemo inventore
