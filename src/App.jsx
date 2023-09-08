@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import ResortDisplay from "./components/ResortDisplay";
-import Nav from "./components/Nav";
 import Banner from "./components/Banner";
+import Error from "./components/Error";
 
 export default function App() {
   const [conditions, setConditions] = useState(null);
@@ -24,10 +24,12 @@ export default function App() {
     const url = `https://ski-resorts-and-conditions.p.rapidapi.com/v1/resort/${searchTerm}`;
     try {
       const respConditions = await fetch(url, options);
-
-      const resultConditions = await respConditions.json();
-      setConditions(resultConditions);
-      console.log(conditions);
+      if (respConditions.ok) {
+        const resultConditions = await respConditions.json();
+        setConditions(resultConditions);
+      } else {
+        throw Error(respConditions.statusText);
+      }
     } catch (error) {
       console.error(error);
     }
@@ -35,7 +37,6 @@ export default function App() {
 
   return (
     <div className="App">
-      <Nav />
       <Banner />
       <Form resortSearch={getConditions} />
       <ResortDisplay conditions={conditions} />

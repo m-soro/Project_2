@@ -27,7 +27,6 @@ export default function Form({ resortSearch }) {
     section.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  // https://github.com/m-soro/Project_2/blob/main/src/assets/images/01.jpeg?raw=true
   return (
     <div className="Form">
       <Parallax

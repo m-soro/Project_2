@@ -1,4 +1,5 @@
 import { Parallax } from "react-parallax";
+import Nav from "./Nav";
 
 const scroll = () => {
   const section = document.querySelector("#SearchForm");
@@ -12,8 +13,9 @@ export default function Banner() {
         bgImage="https://github.com/m-soro/Project_2/blob/main/src/assets/images/05.png?raw=true"
         strength={200}
       >
+        <Nav />
         <div className="Content">
-          <div className="TextContent">
+          <div className="TextContent container">
             <section className="">
               <h1>Open Peaks</h1>
               <p>
@@ -21,7 +23,7 @@ export default function Banner() {
               </p>
 
               <span
-                className="material-symbols-outlined"
+                className="material-symbols-outlined vert-move"
                 onClick={() => scroll()}
               >
                 stat_minus_3

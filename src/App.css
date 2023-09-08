@@ -13,6 +13,84 @@
   height: 3em;
 }
 
+/*** ABOUT ***/
+
+.About dialog {
+  background-image: url("src/assets/images/04.jpeg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.PicContainer {
+  margin-top: 1em;
+  display: flex;
+  justify-content: right;
+}
+
+.About h3 {
+  color: white;
+}
+
+.About article {
+  background-color: transparent;
+  padding: 4rem;
+}
+
+.About footer {
+  background-color: transparent;
+}
+
+.AboutContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.9em;
+}
+
+.AboutText {
+  flex: 2;
+}
+
+.AboutContainer img {
+  flex: 1;
+  width: 8em;
+  height: auto;
+  border-radius: 30px;
+  filter: grayscale(50%);
+}
+
+.AboutContainer img:hover {
+  filter: grayscale(0);
+}
+
+.About footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*** FAVORITES ***/
+
+.Favorites dialog {
+  background-image: url("src/assets/images/06.jpeg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.Favorites article,
+.Favorites footer {
+  background-color: transparent;
+}
+
+.Favorites article {
+  padding: 4rem;
+}
+
+.Favorites footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*** BANNER ***/
 .Banner p,
 .Banner h1,
@@ -22,7 +100,7 @@
 }
 
 .Banner span {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 .Banner h1 {
@@ -34,6 +112,31 @@
   justify-content: center;
   align-items: center;
   height: calc(100vh - 5em);
+}
+
+span.vert-move {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+span.vert-move {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 /*** FORM ***/
