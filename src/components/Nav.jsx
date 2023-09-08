@@ -9,7 +9,9 @@ export default function Nav() {
         </li>
       </ul>
       <ul>
-        <li>Menu</li>
+        <li>Account</li>
+        <li>Favorites</li>
+        <li>About</li>
       </ul>
     </nav>
   );

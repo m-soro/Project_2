@@ -31,7 +31,7 @@ export default function Form({ resortSearch }) {
   return (
     <div className="Form">
       <Parallax
-        bgImage="// https://github.com/m-soro/Project_2/blob/main/src/assets/images/02.jpeg?raw=true"
+        bgImage="https://github.com/m-soro/Project_2/blob/main/src/assets/images/02.jpeg?raw=true"
         strength={200}
         className="darken"
       >
