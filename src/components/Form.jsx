@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Parallax } from "react-parallax";
 // Define a function that is our component, always make sure to declare the props parameter so you can use props in your component
 
 export default function Form({ resortSearch }) {
@@ -18,23 +19,41 @@ export default function Form({ resortSearch }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // props.moviesearch(formData.searchterm);
     resortSearch(formData.searchterm);
   };
 
+  const scroll = () => {
+    const section = document.querySelector("#ResortDisplayResults");
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  // src/assets/images/02.jpeg
   return (
-    <div className="container">
-      <h1>Search Conditions</h1>
-      <form onSubmit={handleSubmit} className="container">
-        <input
-          type="text"
-          className="TextInput"
-          name="searchterm"
-          onChange={handleChange}
-          value={formData.searchterm}
-        />
-        <input type="submit" value="Submit" className="Submit outline" />
-      </form>
+    <div className="Form">
+      <Parallax
+        bgImage="src/assets/images/02.jpeg"
+        strength={200}
+        className="darken"
+      >
+        <div className="FormContents">
+          <form onSubmit={handleSubmit} id="SearchForm">
+            <h1>Search Conditions</h1>
+            <input
+              type="text"
+              className="TextInput"
+              name="searchterm"
+              onChange={handleChange}
+              value={formData.searchterm}
+            />
+            <input
+              type="submit"
+              value="Submit"
+              className="Submit outline"
+              onClick={() => scroll()}
+            />
+          </form>
+        </div>
+      </Parallax>
     </div>
   );
 }
