@@ -1,10 +1,7 @@
-import { Route, Routes, NavLink, HashRouter } from "react-router-dom";
-import { useState } from "react";
-import Banner from "./Banner";
+import { Route, Routes, Link, HashRouter } from "react-router-dom";
 import Account from "../pages/Account";
 import Favorites from "../pages/Favorites";
 import About from "../pages/About";
-import React from "react";
 
 export default function Nav() {
   return (
@@ -12,36 +9,17 @@ export default function Nav() {
       <nav className="Nav container-fluid">
         <ul>
           <li>
-            <NavLink to="/">Logo</NavLink>
+            <a href="#">Logo</a>
           </li>
         </ul>
         <ul>
           <li>
-            <NavLink
-              to="/account"
-              onClick={() =>
-                console.log("going to account page and hiding banner")
-              }
-            >
-              Account
-            </NavLink>
+            <Link to="/account">Account</Link>
           </li>
           <li>
-            <NavLink
-              to="/favorites"
-              onClick={() =>
-                console.log("going to favorites page and hiding banner")
-              }
-            >
-              Favorites
-            </NavLink>
+            <Link to="/favorites">Favorites</Link>
           </li>
-          <NavLink
-            to="/about"
-            onClick={() => console.log("going to about page and hiding banner")}
-          >
-            About
-          </NavLink>
+          <Link to="/about">About</Link>
         </ul>
       </nav>
       <Routes>

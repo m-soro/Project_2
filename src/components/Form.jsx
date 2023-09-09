@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Parallax } from "react-parallax";
 // Define a function that is our component, always make sure to declare the props parameter so you can use props in your component
 
-export default function Form({ resortSearch }) {
+// eslint-disable-next-line react/prop-types
+export default function Form({ getStatistics, getConditions }) {
   //The component must return some JSX
 
   //adding form's state
@@ -19,7 +20,8 @@ export default function Form({ resortSearch }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    resortSearch(formData.searchterm);
+    getStatistics(formData.searchterm);
+    getConditions(formData.searchterm);
   };
 
   const scroll = () => {
@@ -43,6 +45,8 @@ export default function Form({ resortSearch }) {
               name="searchterm"
               onChange={handleChange}
               value={formData.searchterm}
+              placeholder="whistler-blackcomb"
+              required
             />
             <input
               type="submit"

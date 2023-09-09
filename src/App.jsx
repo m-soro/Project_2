@@ -3,13 +3,14 @@ import "./App.css";
 import Form from "./components/Form";
 import ResortDisplay from "./components/ResortDisplay";
 import Banner from "./components/Banner";
-import Error from "./components/Error";
 
 export default function App() {
+  const [liftStatistics, setLiftStatistics] = useState(null);
   const [conditions, setConditions] = useState(null);
 
   useEffect(() => {
-    getConditions("sunvalley");
+    getStatistics("whistler-blackcomb");
+    getConditions("whistler-blackcomb");
   }, []);
 
   const options = {
@@ -20,15 +21,36 @@ export default function App() {
     },
   };
 
-  const getConditions = async (searchTerm) => {
+  const getStatistics = async (searchTerm) => {
     const url = `https://ski-resorts-and-conditions.p.rapidapi.com/v1/resort/${searchTerm}`;
     try {
-      const respConditions = await fetch(url, options);
-      if (respConditions.ok) {
-        const resultConditions = await respConditions.json();
-        setConditions(resultConditions);
-      } else {
-        throw Error(respConditions.statusText);
+      const response = await fetch(url, options);
+      if (response.ok) {
+        const statistics = await response.json();
+        setLiftStatistics(statistics);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const opts = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": "dfd428dbdcmshe06643051b38c0bp1a4bd8jsn59da54a4c468",
+      "X-RapidAPI-Host": "ski-resort-forecast.p.rapidapi.com",
+    },
+  };
+
+  const getConditions = async (searchTerm) => {
+    console.log("running");
+    const url = `https://ski-resort-forecast.p.rapidapi.com/${searchTerm}/forecast?units=i&el=top`;
+    try {
+      const response = await fetch(url, opts);
+      if (response.ok) {
+        const conditions = await response.json();
+        console.log(conditions);
+        setConditions(conditions);
       }
     } catch (error) {
       console.error(error);
@@ -38,8 +60,8 @@ export default function App() {
   return (
     <div className="App">
       <Banner />
-      <Form resortSearch={getConditions} />
-      <ResortDisplay conditions={conditions} />
+      <Form getStatistics={getStatistics} getConditions={getConditions} />
+      <ResortDisplay liftStatistics={liftStatistics} conditions={conditions} />
     </div>
   );
 }

@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Favorites() {
   return (
     <div className="Favorites">
@@ -18,7 +16,7 @@ export default function Favorites() {
           </hgroup>
           <hgroup>
             <h4>By Season Pass</h4>
-            <label for="SelectPass"></label>
+            <label htmlFor="SelectPass"></label>
             <select id="SelectPass" required>
               <option value="" selected>
                 Season Pass
