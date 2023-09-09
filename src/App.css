@@ -28,7 +28,7 @@ h4 {
 /*** ABOUT ***/
 
 .About dialog {
-  background-image: url("src/assets/images/04.jpeg");
+  background-image: url("https://github.com/m-soro/Project_2/blob/main/src/assets/images/04.jpeg?raw=true");
   background-position: center center;
   background-size: cover;
 }
@@ -39,8 +39,19 @@ h4 {
   justify-content: right;
 }
 
-.About h3 {
+.About h3,
+.About a {
   color: white;
+}
+
+dialog article .close {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-image: url("https://cdn3.iconfinder.com/data/icons/tiny-weather-1/512/snow-256.png");
+  background-size: 2.5em 2.5em;
+  opacity: 60%;
+  transition: opacity var(--transition);
 }
 
 .About article {
@@ -48,7 +59,8 @@ h4 {
   padding: 4rem;
 }
 
-.About footer {
+.About footer,
+.About header {
   background-color: transparent;
 }
 
@@ -79,7 +91,7 @@ h4 {
 /*** ACCOUNT ***/
 
 .Account dialog {
-  background-image: url("src/assets/images/03.jpeg");
+  background-image: url("https://github.com/m-soro/Project_2/blob/main/src/assets/images/03.jpeg?raw=true");
   background-position: center center;
   background-size: cover;
 }
@@ -112,7 +124,7 @@ h4 {
 /*** FAVORITES ***/
 
 .Favorites dialog {
-  background-image: url("src/assets/images/06.jpeg");
+  background-image: url("https://github.com/m-soro/Project_2/blob/main/src/assets/images/06.jpeg?raw=true");
   background-position: center center;
   background-size: cover;
 }
@@ -253,7 +265,7 @@ input.Submit {
   display: flex;
   flex-direction: row;
   gap: 2em;
-  padding: 0 2em;
+  padding: 0 4em;
   flex-wrap: wrap;
 }
 
@@ -263,6 +275,8 @@ input.Submit {
 }
 
 .ChairStatus {
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 

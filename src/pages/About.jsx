@@ -3,17 +3,21 @@ export default function About() {
     <div className="About">
       <dialog open>
         <article className="container-fluid">
+          <a href="#close" aria-label="Close" className="close"></a>
           <div className="AboutContainer ">
             <hgroup className="AboutText">
               <h3>Open Peaks</h3>
               <br />
-              <p>
-                Open Peaks is created with React. It is a project for Per
-                Scholas Software Engineering Track.
+              <p style={{ fontSize: "smaller" }}>
+                Open Peaks is built with React. It is a project for Per Scholas
+                Software Engineering Track.
               </p>
             </hgroup>
             <div className="picContainer">
-              <img src="src/assets/images/me.jpg" alt="Mark Soro" />
+              <img
+                src="https://github.com/m-soro/Project_2/blob/main/src/assets/images/me.jpg?raw=true"
+                alt="Mark Soro"
+              />
             </div>
           </div>
           <footer>
@@ -23,9 +27,6 @@ export default function About() {
               className="outline"
             >
               Github
-            </a>
-            <a href="#" role="button" className="outline">
-              close
             </a>
           </footer>
         </article>
