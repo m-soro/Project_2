@@ -19,16 +19,58 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
             <th scope="col">Status</th>
           </tr>
         </thead>
+
         <tbody>
           {Object.keys(liftStatistics.data.lifts.status).map((key, index) => (
             <tr scope="row" key={index}>
               <td>{key}</td>
-              <td>{liftStatistics.data.lifts.status[key]}</td>
+              {liftStatistics.data.lifts.status[key] === "closed" ? (
+                <td style={{ color: "#fd5959" }}>
+                  {liftStatistics.data.lifts.status[key]}
+                </td>
+              ) : (
+                <td style={{ color: "#00204a" }}>
+                  {liftStatistics.data.lifts.status[key]}
+                </td>
+              )}
             </tr>
           ))}
         </tbody>
       </table>
     );
+  };
+
+  const displayForecast = () => {
+    return conditions.forecast5Day.map((each) => {
+      return Object.keys(each).map((key) => {
+        if (key === "dayOfWeek") {
+          return (
+            <article>
+              <summary className="EachDay">{each[key]}</summary>
+              {Object.keys(each).map((key) => {
+                if (key !== "dayOfWeek") {
+                  return (
+                    <details>
+                      <summary>{key}</summary>
+                      <table>
+                        <tbody>
+                          {Object.keys(each[key]).map((attribute, index) => (
+                            <tr key={index}>
+                              <td>{attribute}</td>
+                              <td>{each[key][attribute]}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </details>
+                  );
+                }
+              })}
+            </article>
+          );
+        }
+      });
+    });
   };
 
   const getLiftStatistics = () => {
@@ -42,66 +84,76 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
     );
   };
 
+  const getSnowTotals = () => {
+    let snowTotalKeys = [
+      "Base",
+      "Season",
+      "12 hours",
+      "24 hours",
+      "48 hours",
+      "7 days",
+    ];
+    return Object.keys(liftStatistics.data.conditions).map((key, index) => {
+      return (
+        <ul key={index}>
+          <li>{snowTotalKeys[index]}</li>
+          <li>: {liftStatistics.data.conditions[key]} in.</li>
+        </ul>
+      );
+    });
+  };
+
   const loaded = () => {
     return (
       <div className="ResortDisplay">
         <Parallax
           bgImage="https://github.com/m-soro/Project_2/blob/main/src/assets/images/07.jpeg?raw=true"
           strength={200}
-          blur={{ min: -5, max: 15 }}
+          blur={{ min: -10, max: 15 }}
         >
-          <div
-            className="ResortDisplayResults container"
-            id="ResortDisplayResults"
-          >
-            <section className="ResortDetails">
-              <div className="ResortHeader">
+          <div className="ResortDisplayResults" id="ResortDisplayResults">
+            <section className="ResortDetails container">
+              <article className="ResortHeader">
                 <h2>{liftStatistics.data.name}</h2>
-                <h2>{conditions.basicInfo.region.replace("-", ",")}</h2>
-              </div>
-              <div className="LiftStatistics">{getLiftStatistics()}</div>
+                <h3>{conditions.basicInfo.region.replace("-", ",")}</h3>
+              </article>
+              <article className="LiftStatistics">
+                {getLiftStatistics()}
+              </article>
+              <article className="SnowTotals">
+                {liftStatistics.data.conditions ? getSnowTotals() : <div></div>}
+              </article>
             </section>
             <div className="Results">
-              <section className="ChairStatus">{getLiftStatus()}</section>
-              <div>
-                <h1>Hello</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Debitis, repudiandae asperiores odit magnam explicabo harum
-                  commodi et velit cumque.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Debitis, repudiandae asperiores odit magnam explicabo harum
-                  commodi et velit cumque.
-                </p>
-              </div>
-              <div>
-                <h1>Hello</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Debitis, repudiandae asperiores odit magnam explicabo harum
-                  commodi et velit cumque.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Debitis, repudiandae asperiores odit magnam explicabo harum
-                  commodi et velit cumque.
-                </p>
-              </div>
-            </div>
+              <hgroup className="ChairStatus">
+                <h3>Chair Status</h3>
+                <article>{getLiftStatus()}</article>
+              </hgroup>
 
-            <span
-              className="material-symbols-outlined"
-              onClick={() => scroll()}
-            >
-              stat_3
-            </span>
+              <hgroup className="ForecastBox">
+                <h3>Resort 5 Day Forecast</h3>
+                {conditions !== null ? (
+                  <section className="ForecastContainer">
+                    {displayForecast()}
+                  </section>
+                ) : (
+                  <div></div>
+                )}
+              </hgroup>
+            </div>
+            <div className="BackToTopDiv">
+              <span
+                className="material-symbols-outlined vert-move"
+                onClick={() => scroll()}
+              >
+                stat_3
+              </span>
+            </div>
           </div>
         </Parallax>
       </div>
     );
   };
 
-  return liftStatistics ? loaded() : <div></div>;
+  return liftStatistics && conditions ? loaded() : <div></div>;
 }

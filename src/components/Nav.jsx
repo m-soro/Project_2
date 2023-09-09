@@ -6,7 +6,7 @@ import About from "../pages/About";
 export default function Nav() {
   return (
     <HashRouter>
-      <nav className="Nav container-fluid">
+      <nav className="Nav container">
         <ul>
           <li>
             <a href="#">Logo</a>

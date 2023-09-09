@@ -37,7 +37,11 @@ export default function Form({ getStatistics, getConditions }) {
         className="darken"
       >
         <div className="FormContents">
-          <form onSubmit={handleSubmit} id="SearchForm">
+          <form
+            onSubmit={handleSubmit}
+            id="SearchForm"
+            className="container-fluid"
+          >
             <h1>Search Conditions</h1>
             <input
               type="text"

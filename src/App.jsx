@@ -3,6 +3,7 @@ import "./App.css";
 import Form from "./components/Form";
 import ResortDisplay from "./components/ResortDisplay";
 import Banner from "./components/Banner";
+import { Parallax } from "react-parallax";
 
 export default function App() {
   const [liftStatistics, setLiftStatistics] = useState(null);
