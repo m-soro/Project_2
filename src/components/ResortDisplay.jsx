@@ -34,11 +34,13 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
 
   const displayForecast = () => {
     return conditions.forecast5Day.map((each) => {
-      return Object.keys(each).map((key) => {
+      return Object.keys(each).map((key, index) => {
         if (key === "dayOfWeek") {
           return (
             <article>
-              <summary className="EachDay">{each[key]}</summary>
+              <summary key={index} className="EachDay">
+                {each[key]}
+              </summary>
               {Object.keys(each).map((key) => {
                 if (key !== "dayOfWeek") {
                   return (
@@ -138,6 +140,7 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
 
               <hgroup className="ForecastBox">
                 <h3>Resort 5 Day Forecast</h3>
+
                 {conditions !== null ? (
                   <section className="ForecastContainer">
                     {displayForecast()}

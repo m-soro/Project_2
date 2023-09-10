@@ -378,6 +378,7 @@ table th {
 
 .ForecastContainer article {
   margin: 0;
+  flex: 1 1 0;
 }
 
 .ForecastContainer table td {
