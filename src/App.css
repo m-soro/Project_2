@@ -9,6 +9,14 @@
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
+[role="button"],
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  --background-color: #007cb9;
+}
+
 .App {
   font-family: "Poppins", sans-serif;
 }
@@ -23,6 +31,11 @@ h4 {
 /*** NAV ***/
 .Nav {
   height: 3em;
+}
+
+[role="link"],
+a {
+  color: #005689;
 }
 
 .Logo {
@@ -137,17 +150,21 @@ dialog article .close {
 }
 
 .Favorites article,
-.Favorites footer {
+.Favorites footer,
+.Favorites header {
   background-color: transparent;
 }
 
+.Favorites header {
+  border: none;
+}
 .Favorites article {
   padding: 4rem;
 }
 
 .Favorites footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
 }
 
 /*** BANNER ***/
@@ -271,7 +288,7 @@ input.Submit {
 .ResortDisplayResults .Results {
   display: flex;
   flex-direction: row;
-  gap: 2em;
+  gap: 1.2em;
   padding: 0 4em;
   flex-wrap: wrap;
 }
@@ -279,7 +296,6 @@ input.Submit {
 .ChairStatus {
   display: flex;
   flex-direction: column;
-  /* flex: 1; */
 }
 
 .ForecastBox {
@@ -358,11 +374,6 @@ table th {
   margin: 0;
 }
 
-#ResortDisplayResults > div > section > table > thead > tr > th {
-  font-size: smaller;
-  padding: 0.4em;
-}
-
 details summary::after {
   background-image: url("https://cdn4.iconfinder.com/data/icons/christmas-2434/128/Artboard_2-256.png");
 }
@@ -384,4 +395,10 @@ details summary::after {
   height: 3em;
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 749px) {
+  .react-parallax > img {
+    object-fit: cover;
+  }
 }

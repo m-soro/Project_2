@@ -21,11 +21,7 @@ export default function About() {
             </div>
           </div>
           <footer>
-            <a
-              href="https://m-soro.github.io/Project_2/"
-              role="button"
-              className="outline"
-            >
+            <a href="https://m-soro.github.io/Project_2/" role="button">
               Github
             </a>
           </footer>

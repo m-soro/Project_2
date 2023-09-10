@@ -3,6 +3,9 @@ export default function Favorites() {
     <div className="Favorites">
       <dialog open>
         <article className="container-fluid">
+          <header>
+            <a href="#close" aria-label="Close" className="close"></a>
+          </header>
           <h3>Keep track of your favorite resorts!</h3>
 
           <hgroup>
@@ -28,11 +31,8 @@ export default function Favorites() {
           </hgroup>
 
           <footer>
-            <a href="#" role="button" className="outline">
+            <a href="#" role="button">
               add
-            </a>
-            <a href="#" role="button" className="outline">
-              close
             </a>
           </footer>
         </article>
