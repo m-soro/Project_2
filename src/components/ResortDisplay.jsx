@@ -107,10 +107,8 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
             <section className="ResortDetails container">
               <article className="ResortHeader">
                 <h2>{conditions.basicInfo.name}</h2>
-                <h3>
-                  {`${conditions.basicInfo.region.split("-")[1]}, 
-                  ${conditions.basicInfo.region.split("-")[0]}`}
-                </h3>
+                <h4>{conditions.basicInfo.region.split("-")[1]}</h4>
+                <h4>{conditions.basicInfo.region.split("-")[0]}</h4>
               </article>
               {Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (
                 <article className="LiftStatistics">

@@ -264,6 +264,7 @@ h3 {
   color: #363434;
 }
 .ResortHeader {
+  margin-top: 4em;
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -271,8 +272,9 @@ h3 {
   justify-content: center;
 }
 
-.ResortHeader h2 {
-  padding: 0;
+.ResortHeader h2,
+h4 {
+  padding: 0.2em 0;
   margin: 0;
 }
 
