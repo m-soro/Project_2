@@ -44,13 +44,11 @@ export default function App() {
   };
 
   const getConditions = async (searchTerm) => {
-    console.log("running");
     const url = `https://ski-resort-forecast.p.rapidapi.com/${searchTerm}/forecast?units=i&el=top`;
     try {
       const response = await fetch(url, opts);
       if (response.ok) {
         const conditions = await response.json();
-        console.log(conditions);
         setConditions(conditions);
       }
     } catch (error) {

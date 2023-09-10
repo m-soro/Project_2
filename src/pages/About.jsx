@@ -3,7 +3,7 @@ export default function About() {
     <div className="About">
       <dialog open>
         <article className="container-fluid">
-          <a href="#close" aria-label="Close" className="close"></a>
+          <a href="" aria-label="Close" className="close"></a>
           <div className="AboutContainer ">
             <hgroup className="AboutText">
               <h3>Open Peaks</h3>

@@ -4,7 +4,7 @@ export default function Account() {
       <dialog open>
         <article>
           <header>
-            <a href="#close" aria-label="Close" className="close"></a>
+            <a href="" aria-label="Close" className="close"></a>
             <h3>Sign in</h3>
           </header>
           <form>

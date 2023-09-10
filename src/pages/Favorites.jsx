@@ -4,7 +4,7 @@ export default function Favorites() {
       <dialog open>
         <article className="container-fluid">
           <header>
-            <a href="#close" aria-label="Close" className="close"></a>
+            <a href="" aria-label="Close" className="close"></a>
           </header>
           <h3>Keep track of your favorite resorts!</h3>
 

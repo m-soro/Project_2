@@ -3,8 +3,6 @@
 import { Parallax } from "react-parallax";
 
 export default function ResortDisplay({ liftStatistics, conditions }) {
-  console.log(liftStatistics);
-  console.log(conditions);
   const scroll = () => {
     const section = document.querySelector("nav");
     section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -110,11 +108,8 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
               <article className="ResortHeader">
                 <h2>{conditions.basicInfo.name}</h2>
                 <h3>
-                  {conditions.basicInfo.region
-                    .replace(" - ", " ")
-                    .split(" ")
-                    .reverse()
-                    .join(", ")}
+                  {`${conditions.basicInfo.region.split("-")[1]}, 
+                  ${conditions.basicInfo.region.split("-")[0]}`}
                 </h3>
               </article>
               {Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (

@@ -386,6 +386,7 @@ table th {
 
 details summary::after {
   background-image: url("https://cdn4.iconfinder.com/data/icons/christmas-2434/128/Artboard_2-256.png");
+  background-size: 1.3rem;
 }
 
 .ResortDisplay article {
