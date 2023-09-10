@@ -9,10 +9,10 @@ export default function About() {
               <h3>Open Peaks</h3>
               <br />
               <p>
-                Open Peaks is built with React. A software Engineering project
-                for Per Scholas.
+                Open Peaks is created with React with RapidAPI. A software
+                Engineering project for Per Scholas.
               </p>
-              <p>Built my Mark Soro</p>
+              <p>By Mark Soro</p>
             </hgroup>
             <div className="picContainer">
               <img
