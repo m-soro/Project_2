@@ -1,8 +1,8 @@
 export default function Favorites() {
   return (
     <div className="Favorites">
-      <dialog open>
-        <article className="container-fluid">
+      <dialog open className="container">
+        <article>
           <header>
             <a href="" aria-label="Close" className="close"></a>
           </header>

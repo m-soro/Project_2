@@ -8,11 +8,13 @@ export default function About() {
             <hgroup className="AboutText">
               <h3>Open Peaks</h3>
               <br />
-              <p>
-                Open Peaks is created with React using RapidAPI. A software
-                Engineering project for Per Scholas.
-              </p>
-              <p>By Mark Soro</p>
+              <blockquote>
+                <p>
+                  Open Peaks is created with React using RapidAPI. A software
+                  Engineering project for Per Scholas.
+                </p>
+                <p>By Mark Soro</p>
+              </blockquote>
             </hgroup>
             <div className="picContainer">
               <img
@@ -22,8 +24,8 @@ export default function About() {
             </div>
           </div>
           <footer>
-            <a href="https://m-soro.github.io/Project_2/" role="button">
-              Github
+            <a href="https://github.com/m-soro/Project_2" role="button">
+              GitHub Repo
             </a>
           </footer>
         </article>

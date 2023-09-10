@@ -20,10 +20,16 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
                 <td style={{ color: "#fd5959" }}>
                   {liftStatistics.data.lifts.status[key]}
                 </td>
-              ) : (
+              ) : liftStatistics.data.lifts.status[key] === "scheduled" ? (
+                <td style={{ color: "#ff894c" }}>
+                  {liftStatistics.data.lifts.status[key]}
+                </td>
+              ) : liftStatistics.data.lifts.status[key] === "open" ? (
                 <td style={{ color: "#00204a" }}>
                   {liftStatistics.data.lifts.status[key]}
                 </td>
+              ) : (
+                <td>{liftStatistics.data.lifts.status[key]}</td>
               )}
             </tr>
           ))}

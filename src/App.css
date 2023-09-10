@@ -38,6 +38,10 @@ a {
   color: #005689;
 }
 
+.Nav a:hover {
+  text-decoration: underline;
+}
+
 .Logo {
   margin-top: 1.5em;
   width: 5em;
@@ -106,7 +110,7 @@ dialog article .close {
   width: 8em;
   height: auto;
   border-radius: 30px;
-  filter: grayscale(30%);
+  filter: grayscale(20%);
 }
 
 .AboutContainer img:hover {
@@ -319,8 +323,15 @@ h4 {
   padding-left: 0.6em;
 }
 
+details[open],
 details[open] > summary:not([role]):not(:focus) {
-  color: inherit;
+  color: #ff894c;
+  /*make orange*/
+}
+
+.ForecastContainer details summary {
+  font-size: smaller;
+  transition: color var(--transition);
 }
 
 .ChairStatus table td {
@@ -363,6 +374,17 @@ summary.EachDay {
   padding-bottom: 1.5em;
 }
 
+#ResortDisplayResults
+  > div.Results
+  > hgroup.ForecastBox
+  > section
+  > article
+  > details
+  > summary:hover {
+  text-decoration: underline;
+  color: #ff894c;
+}
+
 .ForecastContainer {
   display: flex;
   justify-content: space-evenly;
@@ -391,6 +413,8 @@ table th {
 details summary::after {
   background-image: url("https://cdn4.iconfinder.com/data/icons/christmas-2434/128/Artboard_2-256.png");
   background-size: 1.3rem;
+  margin: 0;
+  transform: rotate(180deg);
 }
 
 .ResortDisplay article {
