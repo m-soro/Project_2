@@ -249,11 +249,16 @@ input.Submit {
 .ResortDisplay {
   margin-top: 3em;
 }
+
 .ResortDisplayResults {
   height: auto;
   width: 100vw;
 }
 
+.ResortDisplay h2,
+h3 {
+  color: #363434;
+}
 .ResortHeader {
   padding: 1em;
   display: flex;
@@ -291,6 +296,7 @@ input.Submit {
   gap: 1.2em;
   padding: 0 4em;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .ChairStatus {
@@ -380,9 +386,12 @@ details summary::after {
 
 .ResortDisplay article {
   background-color: transparent;
+  transition: background-color 0.8s;
 }
 
-.ResortDisplay .Results article:hover {
+.ResortDisplay .Results article:hover,
+.LiftStatistics:hover,
+.SnowTotals:hover {
   background-color: #fcf9f4;
 }
 
