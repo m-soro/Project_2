@@ -64,7 +64,8 @@ a {
 }
 
 .About p {
-  font-size: small;
+  font-size: smaller;
+  font-weight: 200;
 }
 
 dialog article .close {
