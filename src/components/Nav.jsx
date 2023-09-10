@@ -9,7 +9,13 @@ export default function Nav() {
       <nav className="Nav container">
         <ul>
           <li>
-            <a href="#">Logo</a>
+            <a href="#">
+              <img
+                src="src/assets/images/openPeaks-fotor03.png"
+                alt=""
+                className="Logo"
+              />
+            </a>
           </li>
         </ul>
         <ul>

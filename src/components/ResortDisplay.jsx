@@ -13,13 +13,7 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
   const getLiftStatus = () => {
     return (
       <table>
-        <thead>
-          <tr>
-            <th scope="col">Chair</th>
-            <th scope="col">Status</th>
-          </tr>
-        </thead>
-
+        <thead></thead>
         <tbody>
           {Object.keys(liftStatistics.data.lifts.status).map((key, index) => (
             <tr scope="row" key={index}>
@@ -114,20 +108,39 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
           <div className="ResortDisplayResults" id="ResortDisplayResults">
             <section className="ResortDetails container">
               <article className="ResortHeader">
-                <h2>{liftStatistics.data.name}</h2>
-                <h3>{conditions.basicInfo.region.replace("-", ",")}</h3>
+                <h2>{conditions.basicInfo.name}</h2>
+                <h3>
+                  {conditions.basicInfo.region
+                    .replace(" - ", " ")
+                    .split(" ")
+                    .reverse()
+                    .join(", ")}
+                </h3>
               </article>
-              <article className="LiftStatistics">
-                {getLiftStatistics()}
-              </article>
-              <article className="SnowTotals">
-                {liftStatistics.data.conditions ? getSnowTotals() : <div></div>}
-              </article>
+              {Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (
+                <article className="LiftStatistics">
+                  {getLiftStatistics()}
+                </article>
+              ) : (
+                <div></div>
+              )}
+
+              {liftStatistics.data.conditions ? (
+                <article className="SnowTotals">{getSnowTotals()}</article>
+              ) : (
+                <div></div>
+              )}
             </section>
             <div className="Results">
               <hgroup className="ChairStatus">
-                <h3>Chair Status</h3>
-                <article>{getLiftStatus()}</article>
+                {Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (
+                  <article>
+                    <h3>Chair Status</h3>
+                    {getLiftStatus()}
+                  </article>
+                ) : (
+                  <div></div>
+                )}
               </hgroup>
 
               <hgroup className="ForecastBox">
