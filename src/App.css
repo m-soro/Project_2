@@ -63,6 +63,10 @@ a {
   color: white;
 }
 
+.About p {
+  font-size: smaller;
+}
+
 dialog article .close {
   display: block;
   width: 3rem;
@@ -101,7 +105,7 @@ dialog article .close {
   width: 8em;
   height: auto;
   border-radius: 30px;
-  filter: grayscale(50%);
+  filter: grayscale(30%);
 }
 
 .AboutContainer img:hover {

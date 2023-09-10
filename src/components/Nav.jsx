@@ -11,7 +11,7 @@ export default function Nav() {
           <li>
             <a href="#">
               <img
-                src="src/assets/images/openPeaks-fotor03.png"
+                src="https://github.com/m-soro/Project_2/blob/main/src/assets/images/openPeaks-fotor03.png?raw=true"
                 alt=""
                 className="Logo"
               />

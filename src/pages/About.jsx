@@ -8,10 +8,11 @@ export default function About() {
             <hgroup className="AboutText">
               <h3>Open Peaks</h3>
               <br />
-              <p style={{ fontSize: "smaller" }}>
-                Open Peaks is built with React. It is a project for Per Scholas
-                Software Engineering Track.
+              <p>
+                Open Peaks is built with React. A software Engineering project
+                for Per Scholas.
               </p>
+              <p>Built my Mark Soro</p>
             </hgroup>
             <div className="picContainer">
               <img
