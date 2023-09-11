@@ -3,7 +3,6 @@ import "./App.css";
 import Form from "./components/Form";
 import ResortDisplay from "./components/ResortDisplay";
 import Banner from "./components/Banner";
-import { Parallax } from "react-parallax";
 
 export default function App() {
   const [liftStatistics, setLiftStatistics] = useState(null);
@@ -17,7 +16,7 @@ export default function App() {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "dfd428dbdcmshe06643051b38c0bp1a4bd8jsn59da54a4c468",
+      "X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
       "X-RapidAPI-Host": "ski-resorts-and-conditions.p.rapidapi.com",
     },
   };
@@ -38,7 +37,7 @@ export default function App() {
   const opts = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "dfd428dbdcmshe06643051b38c0bp1a4bd8jsn59da54a4c468",
+      "X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
       "X-RapidAPI-Host": "ski-resort-forecast.p.rapidapi.com",
     },
   };
