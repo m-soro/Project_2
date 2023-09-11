@@ -476,6 +476,24 @@ details summary::after {
   justify-content: center;
 }
 
+.Notice {
+  background-color: #fcf9f4;
+  height: 6rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Notice p {
+  margin: 0;
+  padding: 0;
+  font-size: small;
+  font-weight: 300;
+  color: var(--h1-color);
+}
+
 @media only screen and (max-width: 749px) {
   .react-parallax > img {
     object-fit: cover;
