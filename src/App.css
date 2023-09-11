@@ -436,13 +436,9 @@ summary.EachDay {
   > section
   > article
   > details[open]
-  td {
+  td,
+table td {
   color: var(--h1-color);
-}
-
-table td,
-table th {
-  color: var(--h3-color);
 }
 
 .ForecastContainer article {
@@ -463,9 +459,12 @@ details summary::after {
   transform: rotate(180deg);
 }
 
-.ResortDisplay article {
-  background-color: transparent;
+.ResortHeader {
+  background-color: transparent !important;
+}
 
+.ResortDisplay article {
+  background-color: #fcf9f4a5;
   transition: background-color 0.5s;
 }
 
