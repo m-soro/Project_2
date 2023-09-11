@@ -514,4 +514,10 @@ details summary::after {
   .react-parallax > img {
     object-fit: cover;
   }
+
+  .AboutContainer {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 10px;
+  }
 }
