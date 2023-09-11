@@ -326,12 +326,9 @@ h4 {
 }
 
 .ForecastContainer {
-  /* border: 2px solid blue; */
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
   gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 0.9fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 0.8fr));
 }
 
 .ForecastContainer details summary {
@@ -416,6 +413,15 @@ summary.EachDay {
   > summary:hover {
   text-decoration: underline;
   color: #ff894c;
+}
+
+#ResortDisplayResults
+  > div.Results
+  > hgroup.ForecastBox
+  > section
+  > article
+  > details[open] {
+  background-color: #fcf9f4;
 }
 
 table td,
