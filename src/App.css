@@ -420,8 +420,9 @@ summary.EachDay {
   > hgroup.ForecastBox
   > section
   > article
-  > details[open] {
-  background-color: #fcf9f4;
+  > details[open]
+  td {
+  color: var(--h1-color);
 }
 
 table td,
