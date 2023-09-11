@@ -164,7 +164,7 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
                 stat_3
               </span>
             </div>
-            <div className="Notice">
+            <div className="Notice container-fluid">
               <p>
                 Threre is no guarantee that external data is 100% accurate.
                 Project created for Per Scholas Software Engineering track.
