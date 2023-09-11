@@ -114,7 +114,7 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
     console.log("loading");
     return (
       <div>
-        <h1>Loading</h1>
+        <article aria-busy="true">loading</article>
       </div>
     );
   };
@@ -190,10 +190,7 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
               </span>
             </div>
             <div className="Notice container-fluid">
-              <p>
-                I make no claim that external data is 100% accurate. Project
-                created for Per Scholas Software Engineering track.
-              </p>
+              <p>there is no guarantee that external data is 100% accurate.</p>
             </div>
           </div>
         </Parallax>

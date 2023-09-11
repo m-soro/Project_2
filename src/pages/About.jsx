@@ -8,13 +8,12 @@ export default function About() {
             <hgroup className="AboutText">
               <h3>Open Peaks</h3>
               <br />
-              <blockquote>
-                <p>
-                  Open Peaks is created with React using RapidAPI. A software
-                  Engineering project for Per Scholas.
-                </p>
-                <p>By Mark Soro</p>
-              </blockquote>
+
+              <p>
+                Open Peaks is created with React using RapidAPI. A software
+                Engineering project for Per Scholas.
+              </p>
+              <p>By Mark Soro</p>
             </hgroup>
             <div className="picContainer">
               <img
