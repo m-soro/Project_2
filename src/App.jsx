@@ -22,7 +22,7 @@ export default function App() {
   };
 
   const getStatistics = async (searchTerm) => {
-    const url = `https://ski-resorts-and-conditions.p.rapidapi.com/v1/resort/${searchTerm}`;
+    const url = `https://ski-resorts-and-conditions.p.rapidapi.com/v1/resort/${searchTerm.toLowerCase()}`;
     try {
       const response = await fetch(url, options);
       if (response.ok) {
@@ -46,7 +46,7 @@ export default function App() {
   };
 
   const getConditions = async (searchTerm) => {
-    const url = `https://ski-resort-forecast.p.rapidapi.com/${searchTerm}/forecast?units=i&el=top`;
+    const url = `https://ski-resort-forecast.p.rapidapi.com/${searchTerm.toLowerCase()}/forecast?units=i&el=top`;
     try {
       const response = await fetch(url, opts);
       if (response.ok) {

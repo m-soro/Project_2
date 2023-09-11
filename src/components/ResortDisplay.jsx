@@ -13,7 +13,8 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
       Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (
       <article>
         <table>
-          <h3>Chair Status</h3>
+          <h4>Chair Status</h4>
+          <p></p>
           <thead></thead>
           <tbody>
             {Object.keys(liftStatistics.data.lifts.status).map((key, index) => (
@@ -138,7 +139,7 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
           <div className="ResortDisplayResults">
             <section className="ResortDetails container">
               <article className="ResortHeader">
-                <h2>{conditions.basicInfo.name}</h2>
+                <h3>{conditions.basicInfo.name}</h3>
                 <h4>{conditions.basicInfo.region.split("-")[1]}</h4>
                 <h4>{conditions.basicInfo.region.split("-")[0]}</h4>
               </article>
@@ -169,7 +170,7 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
                 {liftStatistics !== null ? getLiftStatus() : <div></div>}
               </hgroup>
               <hgroup className="ForecastBox">
-                <h3>Resort 5 Day Forecast</h3>
+                <h4>Resort 5 Day Forecast</h4>
 
                 {conditions !== null ? (
                   <section className="ForecastContainer">
