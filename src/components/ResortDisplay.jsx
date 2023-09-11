@@ -156,7 +156,8 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
 
               <div>
                 {liftStatistics !== null &&
-                Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (
+                Object.keys(liftStatistics.data.lifts.status).length !== 0 &&
+                liftStatistics.data.conditions !== undefined ? (
                   <article className="SnowTotals">{getSnowTotals()}</article>
                 ) : (
                   <div></div>
