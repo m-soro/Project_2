@@ -80,11 +80,13 @@ dialog article .close {
   background-size: 2.5em 2.5em;
   opacity: 60%;
   transition: opacity var(--transition);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0;
 }
 
 .About article {
   background-color: transparent;
-  padding: 4rem;
+  padding: 3rem 2.5rem;
 }
 
 .About footer,
@@ -97,12 +99,18 @@ dialog article .close {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 0.9em;
+  column-gap: 3rem;
   flex-wrap: wrap;
 }
 
 .AboutText {
   flex: 2;
+}
+
+.AboutContainer blockquote {
+  /* border: 2px solid green; */
+  margin: 0;
+  padding: 0 0 0 0.9rem;
 }
 
 .AboutContainer img {
@@ -111,6 +119,8 @@ dialog article .close {
   height: auto;
   border-radius: 30px;
   filter: grayscale(20%);
+  margin: 0;
+  padding: 0;
 }
 
 .AboutContainer img:hover {
@@ -158,9 +168,9 @@ dialog article .close {
   background-size: cover;
 }
 
-.Favorites h3 {
+.Favorites h4 {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.3rem;
 }
 
 .Favorites header {
@@ -182,7 +192,7 @@ dialog article .close {
   border: none;
 }
 .Favorites article {
-  padding: 4rem;
+  padding: 2.8rem 2rem;
 }
 
 .Favorites footer {
@@ -315,6 +325,20 @@ h4 {
   list-style-type: none;
 }
 
+.ForecastContainer {
+  /* border: 2px solid blue; */
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 0.9fr));
+}
+
+.ForecastContainer details summary {
+  font-size: smaller;
+  transition: color var(--transition);
+}
+
 .ResortDisplayResults .Results {
   display: flex;
   flex-direction: row;
@@ -327,24 +351,20 @@ h4 {
 .ChairStatus {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .ForecastBox {
-  flex: 2;
+  flex: 10;
 }
 
 .ForecastBox h3 {
-  padding-left: 0.6em;
+  padding-left: 0.1rem;
 }
 
 details[open],
 details[open] > summary:not([role]):not(:focus) {
   color: #ff894c;
-}
-
-.ForecastContainer details summary {
-  font-size: smaller;
-  transition: color var(--transition);
 }
 
 .ChairStatus table td {
@@ -398,15 +418,6 @@ summary.EachDay {
   color: #ff894c;
 }
 
-.ForecastContainer {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 2em 0;
-  gap: 1em;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
 table td,
 table th {
   color: var(--h3-color);
@@ -432,13 +443,19 @@ details summary::after {
 
 .ResortDisplay article {
   background-color: transparent;
-  transition: background-color 0.8s;
+  transition: background-color 0.5s;
 }
 
 .ResortDisplay .Results article:hover,
 .LiftStatistics:hover,
 .SnowTotals:hover {
   background-color: #fcf9f4;
+}
+
+.ResortDisplay .Results article:active,
+.LiftStatistics:active,
+.SnowTotals:active {
+  opacity: 95%;
 }
 
 .ResortDisplay span {
