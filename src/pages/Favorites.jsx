@@ -6,9 +6,9 @@ export default function Favorites() {
           <header>
             <a href="" aria-label="Close" className="close"></a>
           </header>
-          <h3>Keep track of your favorite resorts!</h3>
 
-          <hgroup>
+          <h4>Keep track of your favorite resorts!</h4>
+          <div>
             <h4>Individual Resorts</h4>
             <input
               type="search"
@@ -16,8 +16,8 @@ export default function Favorites() {
               name="search"
               placeholder="Search"
             />
-          </hgroup>
-          <hgroup>
+          </div>
+          <div>
             <h4>By Season Pass</h4>
             <label htmlFor="SelectPass"></label>
             <select id="SelectPass" required>
@@ -28,7 +28,7 @@ export default function Favorites() {
               <option>Epic</option>
               <option>Mountain Collective</option>
             </select>
-          </hgroup>
+          </div>
 
           <footer>
             <a href="#" role="button">

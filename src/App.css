@@ -158,6 +158,20 @@ dialog article .close {
   background-size: cover;
 }
 
+.Favorites h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.Favorites header {
+  padding: 0.5rem 0;
+}
+
+.Favorites footer {
+  padding: 1rem 0.3rem;
+  margin-top: 1rem;
+}
+
 .Favorites article,
 .Favorites footer,
 .Favorites header {
@@ -326,7 +340,6 @@ h4 {
 details[open],
 details[open] > summary:not([role]):not(:focus) {
   color: #ff894c;
-  /*make orange*/
 }
 
 .ForecastContainer details summary {
