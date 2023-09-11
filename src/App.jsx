@@ -28,6 +28,9 @@ export default function App() {
       if (response.ok) {
         const statistics = await response.json();
         setLiftStatistics(statistics);
+      } else {
+        setLiftStatistics(null);
+        console.log("Error");
       }
     } catch (error) {
       console.error(error);

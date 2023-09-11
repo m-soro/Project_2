@@ -9,32 +9,38 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
   };
 
   const getLiftStatus = () => {
-    return (
-      <table>
-        <thead></thead>
-        <tbody>
-          {Object.keys(liftStatistics.data.lifts.status).map((key, index) => (
-            <tr scope="row" key={index}>
-              <td>{key}</td>
-              {liftStatistics.data.lifts.status[key] === "closed" ? (
-                <td style={{ color: "#fd5959" }}>
-                  {liftStatistics.data.lifts.status[key]}
-                </td>
-              ) : liftStatistics.data.lifts.status[key] === "scheduled" ? (
-                <td style={{ color: "#ff894c" }}>
-                  {liftStatistics.data.lifts.status[key]}
-                </td>
-              ) : liftStatistics.data.lifts.status[key] === "open" ? (
-                <td style={{ color: "#00204a" }}>
-                  {liftStatistics.data.lifts.status[key]}
-                </td>
-              ) : (
-                <td>{liftStatistics.data.lifts.status[key]}</td>
-              )}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    return liftStatistics !== null &&
+      Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (
+      <article>
+        <table>
+          <h3>Chair Status</h3>
+          <thead></thead>
+          <tbody>
+            {Object.keys(liftStatistics.data.lifts.status).map((key, index) => (
+              <tr scope="row" key={index}>
+                <td>{key}</td>
+                {liftStatistics.data.lifts.status[key] === "closed" ? (
+                  <td style={{ color: "#fd5959" }}>
+                    {liftStatistics.data.lifts.status[key]}
+                  </td>
+                ) : liftStatistics.data.lifts.status[key] === "scheduled" ? (
+                  <td style={{ color: "#ff894c" }}>
+                    {liftStatistics.data.lifts.status[key]}
+                  </td>
+                ) : liftStatistics.data.lifts.status[key] === "open" ? (
+                  <td style={{ color: "#00204a" }}>
+                    {liftStatistics.data.lifts.status[key]}
+                  </td>
+                ) : (
+                  <td>{liftStatistics.data.lifts.status[key]}</td>
+                )}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </article>
+    ) : (
+      " "
     );
   };
 
@@ -103,47 +109,64 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
     });
   };
 
+  const loading = () => {
+    console.log("loading");
+    return (
+      <div>
+        <h1>Loading</h1>
+      </div>
+    );
+  };
+
+  const statsMessage = () => {
+    return liftStatistics === null ||
+      Object.keys(liftStatistics.data.lifts.status).length === 0 ? (
+      <p>Lift information and snow totals are not available.</p>
+    ) : (
+      <p></p>
+    );
+  };
+
   const loaded = () => {
     return (
-      <div className="ResortDisplay">
+      <div className="ResortDisplay" id="ResortDisplayResults">
         <Parallax
           bgImage="https://github.com/m-soro/Project_2/blob/main/src/assets/images/07.jpeg?raw=true"
           strength={200}
           blur={{ min: -10, max: 15 }}
         >
-          <div className="ResortDisplayResults" id="ResortDisplayResults">
+          <div className="ResortDisplayResults">
             <section className="ResortDetails container">
               <article className="ResortHeader">
                 <h2>{conditions.basicInfo.name}</h2>
                 <h4>{conditions.basicInfo.region.split("-")[1]}</h4>
                 <h4>{conditions.basicInfo.region.split("-")[0]}</h4>
               </article>
-              {Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (
-                <article className="LiftStatistics">
-                  {getLiftStatistics()}
-                </article>
-              ) : (
-                <div></div>
-              )}
-
-              {liftStatistics.data.conditions ? (
-                <article className="SnowTotals">{getSnowTotals()}</article>
-              ) : (
-                <div></div>
-              )}
-            </section>
-            <div className="Results">
-              <hgroup className="ChairStatus">
-                {Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (
-                  <article>
-                    <h3>Chair Status</h3>
-                    {getLiftStatus()}
+              <div className="StatsMessage">{statsMessage()}</div>
+              <div>
+                {liftStatistics !== null &&
+                Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (
+                  <article className="LiftStatistics">
+                    {getLiftStatistics()}
                   </article>
                 ) : (
                   <div></div>
                 )}
-              </hgroup>
+              </div>
 
+              <div>
+                {liftStatistics !== null &&
+                Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (
+                  <article className="SnowTotals">{getSnowTotals()}</article>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+            </section>
+            <div className="Results">
+              <hgroup className="ChairStatus">
+                {liftStatistics !== null ? getLiftStatus() : <div></div>}
+              </hgroup>
               <hgroup className="ForecastBox">
                 <h3>Resort 5 Day Forecast</h3>
 
@@ -166,8 +189,8 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
             </div>
             <div className="Notice container-fluid">
               <p>
-                Threre is no guarantee that external data is 100% accurate.
-                Project created for Per Scholas Software Engineering track.
+                I make no claim that external data is 100% accurate. Project
+                created for Per Scholas Software Engineering track.
               </p>
             </div>
           </div>
@@ -176,5 +199,15 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
     );
   };
 
-  return liftStatistics && conditions ? loaded() : <div></div>;
+  console.log(
+    liftStatistics !== null
+      ? Object.keys(liftStatistics.data.lifts.status).length === 0
+      : "no lift statistics available"
+  );
+  console.log("Error getting Ski Conditions?", conditions === null);
+  console.log("Error getting liftstatistics?", liftStatistics === null);
+  console.log(conditions);
+  console.log(liftStatistics);
+
+  return conditions || liftStatistics ? loaded() : loading();
 }
