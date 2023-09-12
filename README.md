@@ -14,13 +14,13 @@ Check mountain conditions all over world!
 
 ## Introduction
 
-As someone who looks forward to every ski season ⛷️ I decided to combine my interest in skiing and programming for this second project!
+As someone who looks forward to every winter ⛷️ I decided to combine my interest in skiing and programming for this second project!
 
 ## Process
 
 ### Plan
 
-I started by sketching how I wanted my app to look like, even though it didn't turn out like the sketch I am pretty happy with the end result. Its also a priority that this app is mobile friendly/responsive.
+I started by sketching how I wanted my app to look like, even though it didn't turn out like this sketch, I am pretty happy with the end result. I used this sketch to eperiement from and build upon it. Its also a priority that this app is mobile friendly/responsive.
 
 <img src="https://raw.githubusercontent.com/m-soro/Project_2/main/src/assets/images/sketch.png?raw=true" width="200" height="317">
 
@@ -28,8 +28,9 @@ I started by sketching how I wanted my app to look like, even though it didn't t
 
 #### Front End
 
-I just didn't want to create a form and results page, I wanted a transportive ski resort feel and is visually similar to other well known ski resort websites.
-I decided to include a parallax effect to achieve this by using npm package react-parallax.
+I just didn't want to create a form and results page, I wanted a transportive feel, pages with beautiful images of snow and mountain peaks.
+
+I decided to include a parallax effect by using npm package react-parallax.
 
 #### Back End
 
