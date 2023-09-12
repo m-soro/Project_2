@@ -62,11 +62,11 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 - I wanted a clean design and beautiful interface.
 
-- This app is heavy on the images so the trade off is _slow_ load times. I considered changing reducing the quality of images and just using gradients but then it would just look some what plain.
+- This app is heavy on the images so the trade off is _slow_ load times. I considered changing images or reducing the quality of images or just use gradients but decided that it would be a bit plain.
 
-- At first I was hesitant to put a background color for the results page cards but, its difficult to read the results so I added a semi transparent white background color that turns solid white when hovered and darken the texts.
+- At first I was hesitant to put a background color for the results page cards and left it transparent but, its difficult to read the results so I added a semi opaque white background color that turns solid white when hovered and darken the texts.
 
-- I added subtle animations for down arrow and back to top arrow, which when clicked scrolls smoothly to the next page.
+- I added subtle animations for down arrow and back to top arrow, which when clicked, scrolls smoothly to the next page the same for the submit button.
 
 ### Limitations
 
