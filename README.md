@@ -40,17 +40,17 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 #### Front End
 
-- Because this app is heavy on the images, it tends to load _slower_. All images are already compressed time of deployment.
+- Because this app is heavy on the images, it tends to load _slower_. All images are already compressed at the time of deployment.
 
-- For the results page, at first I didn't want to show any results in it. I wanted the user to search and then see the results page. However it breaks the parallax because every "page" has a height of 100vh, if the results shows no result or incomplete result, it ends up only half a page.
+- For the results page, at first I didn't want to show any results in it. I wanted the user to search and then see the results page. However it breaks the parallax because every "page" has a height of "100vh", if the results shows no result or incomplete result, it ends up only half a page.
 
-- To fix this, I decided to have an example of a complete search result showing as soon as the page loads.
+- To fix this, I decided to have an example of a complete search result showing as soon as the page loads and set the results page to "auto" so page height is dependent on the page result, and since there will always be a result since I was calling two APIs the page would always ends up a whole page.
 
-- Another challenge is presenting the forecast data. I did not want just tables of attributes and value displayed right away. It may look overly cluttered in the page so I decided to use drop downs for detailed am, pm and night forecasts.
+- Another challenge is presenting the forecast data. I just did not want tables of attributes and value displayed right away. It may look overly cluttered in the page so I decided to use drop downs for detailed am, pm and night forecasts.
 
 #### Back End
 
-- The APIs have some overlapping data, but one is finicky with resort's name and while the other is permissive. It almost never return an error.
+- The APIs have some overlapping data, like the resort infromations, but one is finicky with resort's name and while the other is permissive and almost never return an error.
 
 - Another challenge is that each day's forecast is divided into three objects. I had a bit of challenge extracting this data. I used multiple return statements and drilled down in each object nest then use Object.keys(myObj) and map method to extract these data.
 
