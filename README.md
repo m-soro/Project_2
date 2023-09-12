@@ -36,7 +36,7 @@ I decided to include a parallax effect by using npm package react-parallax.
 
 For the API, I am calling two APIs every time a search is triggerred. One API is resposible for the snow and chair statistics and the other API is resposible for resort conditions.
 
-### Challenges
+## Challenges
 
 #### Front End
 
@@ -58,7 +58,7 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 - I fixed this by adding multiple conditions that checks if the object is not null, if its not null, then check if there are any keys inside the object, if there are keys then iterate and create a drop down and repeat this for all the forecast data.
 
-### Design
+## Design
 
 - I wanted a clean design and beautiful interface.
 
@@ -68,16 +68,16 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 - I added subtle animation for down arrow and back to top arrow, which when clicked, scrolls smoothly to the next page and the same for the submit button.
 
-### Limitations
+## Limitations
 
 - It takes trial and error to find the correct key word for each resort's name. The two APIs are not using the same resort ID or slug name so it may return inconsistent results.
 
-### Future Plans
+## Future Plans
 
 - I would love to extend this project where you can save your favorite resorts, individually or by season pass and get all the results.
 
-### Bonus ⭐⭐⭐!
+## Bonus ⭐⭐⭐!
 
 Since some of my cohort is having issues with their app deployment, I decided to make a short video tutorial on how to easily deploy their applications to github pages and netlify!
 
-[<img src="https://raw.githubusercontent.com/m-soro/Project_2/main/src/assets/images/howto.png" width="50%">](https://vimeo.com/863756564 "How to deploy your React App to GitHub and Netlify")
+[<img src="https://raw.githubusercontent.com/m-soro/Project_2/main/src/assets/images/howto.png" width="60%">](https://vimeo.com/863756564 "How to deploy your React App to GitHub and Netlify")
