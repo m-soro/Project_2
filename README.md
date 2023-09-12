@@ -2,7 +2,7 @@
 
 <img src="https://github.com/m-soro/Project_2/blob/main/src/assets/images/openPeaks.png?raw=true" width="358" height="191">
 
-Check mountain conditions all over world!
+Check mountain conditions all over the world!
 
 ---
 
@@ -14,13 +14,13 @@ Check mountain conditions all over world!
 
 ## Introduction
 
-As someone who looks forward to every winter ⛷️ I decided to combine my interest in skiing and programming for this second project!
+As someone who looks forward to every winter season ⛷️ I decided to combine my interest in skiing and programming for this second project!
 
 ## Process
 
 ### Plan
 
-I started by sketching how I wanted my app to look like, even though it didn't turn out like this sketch, I am pretty happy with the end result. I used this sketch to eperiement from and build upon it. Its also a priority that this app is mobile friendly/responsive.
+I started by sketching how I wanted my app to look like, even though it didn't turn out like this sketch, I am pretty happy with the end result. I used this sketch as a jumping point and build upon it. Its also a priority that this app is mobile friendly/responsive.
 
 <img src="https://raw.githubusercontent.com/m-soro/Project_2/main/src/assets/images/sketch.png?raw=true" width="200" height="317">
 
