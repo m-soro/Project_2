@@ -75,3 +75,9 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 ### Future Plans
 
 - I would love to extend this project where you can save your favorite resorts, individually or by season pass and get all the results.
+
+### Bonus ⭐!
+
+Since some of my cohort is having issues with their app deployment, I decided to make a short video tutorial on how to easily deploy their applications to github pages and netlify!
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/863756564?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="How to deploy Vite + React App to GitHub and Netlify"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
