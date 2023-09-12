@@ -80,4 +80,6 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 Since some of my cohort is having issues with their app deployment, I decided to make a short video tutorial on how to easily deploy their applications to github pages and netlify!
 
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/863756564?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="How to deploy Vite + React App to GitHub and Netlify"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<iframe src="https://player.vimeo.com/video/863756564?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="How to deploy Vite + React App to GitHub and Netlify"></iframe>
+
+[<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/howto.png?raw=true" width="50%">](https://vimeo.com/863756564 "How to deploy your React App to GitHub and Netlify")
