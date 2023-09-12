@@ -10,8 +10,8 @@ export default function About() {
               <br />
 
               <p>
-                Open Peaks is created with React using RapidAPI. A software
-                Engineering project for Per Scholas.
+                Open Peaks is created with React using RapidAPI. More details
+                about the project can be found in the GitHub Repo.
               </p>
               <p>By Mark Soro</p>
             </hgroup>

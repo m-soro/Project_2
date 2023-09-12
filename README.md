@@ -42,17 +42,17 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 - Because this app is heavy on the images, it tends to load _slower_. All images are already compressed at the time of deployment.
 
-- In the beginning each page has has a "100vh", it works great for static contents, however the "results" page is dependent on the result of the API call. If it returned a long list of chair status, it overflows and gets cut off.
+- At the start each page has a height of "100vh", it works great for static contents, the first two pages, however the "results" page is dependent on the result of the API call. If it returned a long list of chair status, it overflows and gets cut off.
 
-- To fix this, I decided to have an example of a complete search result showing as soon as the page loads and set the results page to "auto" so page height is dependent on the page result, and because one of the API is permissive with keywords, there will always be a result so the whole page would still show up.
+- To fix this, I decided to have an example of a complete search result showing as soon as the page loads and set the results page to "auto" the first render is a whole page, the second render is dependent on the API call result, and because one of the API is permissive with keywords, it always returns a result so a whole page is still able to render.
 
 - Another challenge is presenting the forecast data. I just did not want tables of attributes and value displayed right away. It may look overly cluttered in the page so I decided to use drop downs for detailed am, pm and night forecasts.
 
 #### Back End
 
-- The APIs have some overlapping data, like the resort infromations, but one is finicky with resort's name and while the other is permissive and almost never return an error.
+- The two APIs have some overlapping data, like the resort information, but one is finicky with resort's name and while the other is permissive and almost never return an error.
 
-- Another challenge is that each day's forecast is divided into three objects. I had a bit of challenge extracting this data. I used multiple return statements and drilled down in each object nest then use Object.keys(myObj) and map method to extract these data.
+- Another challenge is that each day's forecast is nested into three objects. I had a bit of challenge extracting this data. I used multiple return statements and drilled down in each object nest then use Object.keys(myObj) and map method to extract these data.
 
 - As soon as I was succesful getting the data, another problem was the empty objects that the API returns. At first, I did not notice it but after trying out different resorts my app would crash unexpectedly, it was beacuse I was trying to access an object property that doesn't exist.
 
@@ -62,9 +62,9 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 - I wanted a clean design and beautiful interface.
 
-- This app is heavy on the images so the trade off is slow load times, I considered using gradients and reducing the quality images but then decided against it.
+- This app is heavy on the images so the trade off is _slow_ load times. I considered changing reducing the quality of images and just using gradients but then it would just look some what plain.
 
-- At first I was hesitant to put a background color for the results page but, its difficult to read the results so I added a white background color and darken the texts.
+- At first I was hesitant to put a background color for the results page cards but, its difficult to read the results so I added a semi transparent white background color that turns solid white when hovered and darken the texts.
 
 - I added subtle animations for down arrow and back to top arrow, which when clicked scrolls smoothly to the next page.
 
@@ -74,4 +74,4 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 ### Future Plans
 
-- I would love to extend this project where you can save your favorite resorts, individual or by season pass and get all the results.
+- I would love to extend this project where you can save your favorite resorts, individually or by season pass and get all the results.
