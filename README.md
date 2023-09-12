@@ -64,7 +64,7 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 - This app is heavy on the images so the trade off is _slow_ load times. I considered changing images or reducing the quality of images or just use gradients but decided against it.
 
-- At first I was hesitant to put a background color for the results page cards and left it transparent for aw hile but, its difficult to read the results so I added a semi opaque white background color that turns solid white when hovered and darken the texts.
+- At first I was hesitant to put a background color for the results page cards and left it transparent for awhile but, its difficult to read the results so I added a semi opaque white background color that turns solid white when hovered and darken the texts.
 
 - I added subtle animation for down arrow and back to top arrow, which when clicked, scrolls smoothly to the next page and the same for the submit button.
 
