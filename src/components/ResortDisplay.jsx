@@ -12,9 +12,9 @@ export default function ResortDisplay({ liftStatistics, conditions }) {
     return liftStatistics !== null &&
       Object.keys(liftStatistics.data.lifts.status).length !== 0 ? (
       <article>
+        <h4>Chair Status</h4>
+        <p></p>
         <table>
-          <h4>Chair Status</h4>
-          <p></p>
           <thead></thead>
           <tbody>
             {Object.keys(liftStatistics.data.lifts.status).map((key, index) => (
