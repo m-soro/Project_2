@@ -1,16 +1,16 @@
 # Open Peaks
 
+<img src="https://github.com/m-soro/Project_2/blob/main/src/assets/images/openPeaks.png?raw=true" width="358" height="191">
+
 Check mountain conditions all over world!
 
-<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/06.png?raw=true" width="360" height="279">
+---
 
-###
+<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/06.png?raw=true" width="360" height="auto">
 
-<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/05.gif?raw=true" width="360" height="279">
+<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/05.gif?raw=true" width="360" height="auto">
 
-###
-
-<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/01.png?raw=true" width="300" height="517">
+<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/01.png?raw=true" width="300" height="auto">
 
 ## Introduction
 
