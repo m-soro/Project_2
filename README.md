@@ -24,7 +24,7 @@ As someone who looks forward to every winter season ⛷️ I decided to combine 
 
 I started by sketching how I wanted my app to look like, even though it didn't turn out like this sketch, I am pretty happy with the end result. I used this sketch as a jumping point and build upon it. Its also a priority that this app is mobile friendly/responsive.
 
-<img src="https://raw.githubusercontent.com/m-soro/Project_2/main/src/assets/images/sketch.png?raw=true" width="250" height="auto">
+<img src="https://raw.githubusercontent.com/m-soro/Project_2/main/src/assets/images/sketch.png?raw=true" width="350" height="auto">
 
 ### Build
 
