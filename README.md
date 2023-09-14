@@ -6,15 +6,15 @@ Check mountain conditions all over the world!
 
 ---
 
-<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/06.png?raw=true" width="360" height="auto">
+<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/06.png?raw=true" width="560" height="auto">
 
-<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/05.gif?raw=true" width="360" height="auto">
+<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/05.gif?raw=true" width="560" height="auto">
 
 <img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/01.png?raw=true" width="300" height="auto">
 
 ## Introduction
 
-As someone who looks forward to every winter season ⛷️ I decided to combine my interest in skiing and programming for this second project!
+As someone who looks forward to every winter season ⛷️ I decided to combine my interest in programming and skiing for this second project!
 
 ## Process
 
@@ -68,9 +68,11 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 - I added subtle animation for down arrow and back to top arrow, which when clicked, scrolls smoothly to the next page and the same for the submit button.
 
-## Limitations
+## Limitations and Known Issues
 
 - It takes trial and error to find the correct key word for each resort's name. The two APIs are not using the same resort ID or slug name so it may return inconsistent results.
+
+- Sometimes, when the app is first loaded, one of the API call may return an error. If this happens just refresh the page again to call fetch again.
 
 ## Future Plans
 
@@ -78,6 +80,6 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 ## Bonus ⭐⭐⭐!
 
-Since some of my cohort is having issues with their app deployment, I decided to make a short video tutorial on how to easily deploy their applications to GitHub pages and Netlify!
+Because some of my cohort is having issues with their app deployment, I decided to make a short video 🎥 tutorial on how to painlessly deploy their applications to GitHub pages and Netlify!
 
-[<img src="https://raw.githubusercontent.com/m-soro/Project_2/main/src/assets/images/howto.png" width="60%">](https://vimeo.com/863756564 "How to deploy your React App to GitHub and Netlify")
+[<img src="https://raw.githubusercontent.com/m-soro/Project_2/main/src/assets/images/howto.png" width="70%">](https://vimeo.com/863756564 "How to deploy your React App to GitHub and Netlify")
