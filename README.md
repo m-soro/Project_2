@@ -10,7 +10,9 @@ Check mountain conditions all over the world!
 
 <img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/05.gif?raw=true" width="560" height="auto">
 
-<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/01.png?raw=true" width="300" height="auto">
+<img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/01.png?raw=true" width="280" height="auto"><img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/02.png?raw=true" width="280" height="auto"><img src="https://github.com/m-soro/m-soro.github.io/blob/main/src/assets/images/openpeaks/03.png?raw=true" width="280" height="auto">
+
+---
 
 ## Introduction
 
