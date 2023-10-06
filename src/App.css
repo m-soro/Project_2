@@ -6,6 +6,7 @@
 
 /*** GLOBAL ***/
 .App {
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
@@ -15,10 +16,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   --background-color: #007cb9;
-}
-
-.App {
-  font-family: "Poppins", sans-serif;
 }
 
 h1,
@@ -105,12 +102,6 @@ dialog article .close {
 
 .AboutText {
   flex: 2;
-}
-
-.AboutContainer blockquote {
-  /* border: 2px solid green; */
-  margin: 0;
-  padding: 0 0 0 0.9rem;
 }
 
 .AboutContainer img {
@@ -233,10 +224,7 @@ span.vert-move {
   -webkit-animation: mover 1s infinite alternate;
   animation: mover 1s infinite alternate;
 }
-span.vert-move {
-  -webkit-animation: mover 1s infinite alternate;
-  animation: mover 1s infinite alternate;
-}
+
 @-webkit-keyframes mover {
   0% {
     transform: translateY(0);
@@ -302,6 +290,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: transparent !important;
 }
 
 .ResortHeader h3,
@@ -459,10 +448,6 @@ details summary::after {
   transform: rotate(180deg);
 }
 
-.ResortHeader {
-  background-color: transparent !important;
-}
-
 .ResortDisplay article {
   background-color: #fcf9f4a5;
   transition: background-color 0.5s;
@@ -508,6 +493,8 @@ details summary::after {
   font-weight: 300;
   color: var(--h1-color);
 }
+
+/* RESPONSIVE */
 
 @media only screen and (max-width: 749px) {
   .react-parallax > img {

@@ -8,7 +8,6 @@ export default function About() {
             <hgroup className="AboutText">
               <h3>Open Peaks</h3>
               <br />
-
               <p>
                 Open Peaks is created with React using RapidAPI. Detailed
                 information can be found in the GitHub repo.
