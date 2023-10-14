@@ -3,10 +3,12 @@ import "./App.css";
 import Form from "./components/Form";
 import ResortDisplay from "./components/ResortDisplay";
 import Banner from "./components/Banner";
+import LoadingPage from "./components/LoadingPage";
 
 export default function App() {
   const [liftStatistics, setLiftStatistics] = useState(null);
   const [conditions, setConditions] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getStatistics("whistler-blackcomb");
@@ -52,6 +54,7 @@ export default function App() {
       if (response.ok) {
         const conditions = await response.json();
         setConditions(conditions);
+        setIsLoading(false);
       }
     } catch (error) {
       console.error(error);
@@ -60,6 +63,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <div>{isLoading ? <LoadingPage /> : <p></p>}</div>
       <Banner />
       <Form getStatistics={getStatistics} getConditions={getConditions} />
       <ResortDisplay liftStatistics={liftStatistics} conditions={conditions} />
