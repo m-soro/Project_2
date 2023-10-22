@@ -80,11 +80,11 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 - ~~I would love to extend this project where you can save your favorite resorts, individually or by season pass and get all the results~~.
 
-## ⭐⭐⭐ Future Plans Accomplished ⭐⭐⭐!
+## Future Plans Accomplished ⭐⭐⭐
 
 - [See the second version](https://openpeaks.onrender.com/). Open Peaks V2 is a full stack MERN App, users can create an account and log in. Users can keep track of their favorite destinations in their own account.
 
-## ⭐⭐⭐ Bonus ⭐⭐⭐!
+## Bonus ⭐⭐⭐
 
 Because some of my cohort is having issues with their app deployment, I decided to make a short video 🎥 tutorial on how to painlessly deploy their applications to GitHub pages and Netlify!
 
