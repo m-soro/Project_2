@@ -86,6 +86,6 @@ For the API, I am calling two APIs every time a search is triggerred. One API is
 
 ## Bonus ⭐⭐⭐
 
-Because some of my cohort is having issues with their app deployment, I decided to make a short video 🎥 tutorial on how to painlessly deploy their applications to GitHub pages and Netlify!
+Because some of my cohort is having issues with their app deployment, I decided to make a short video 🎥 tutorial on how to seamlessly deploy their applications to GitHub pages and Netlify!
 
 [<img src="https://raw.githubusercontent.com/m-soro/Project_2/main/src/assets/images/howto.png" width="70%">](https://vimeo.com/863756564 "How to deploy your React App to GitHub and Netlify")
